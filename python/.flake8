@@ -1,0 +1,22 @@
+[flake8]
+exclude =
+    .git,
+    .github,
+    .mypy_cache,
+    __pycache__,
+    venv,
+    .venv
+extend-ignore =
+    # Missing docstring in public module
+    D100, D104,
+    # Missing docstring in magic method
+    D105,
+    # Missing docstring in __init__
+    D107,
+    # Whitespace before ":" - this conflicts with Black
+    E203,
+max-line-length = 120
+per-file-ignores =
+    # DALL000: Missing __all__, setup isn't supposed to be imported
+    setup.py: DALL000,
+
